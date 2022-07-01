@@ -1,0 +1,10 @@
+schema: http://localhost:8000/___graphql
+documents:
+  - ./src/**/*.{ts,tsx}
+  - ./node_modules/gatsby*/!(node_modules)/**/*.js
+watch: true
+generates:
+  ./src/_generated/graphql-types.tsx:
+    plugins:
+      - typescript
+      - typescript-operations

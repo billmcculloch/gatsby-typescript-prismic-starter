@@ -1,0 +1,43 @@
+{
+  "name": "gatsby-ts-prismic-starter",
+  "license": "MIT",
+  "dependencies": {
+    "@prismicio/client": "^6.4.2",
+    "@prismicio/react": "^2.2.0",
+    "@prismicio/types": "^0.1.27",
+    "gatsby": "^4.10.0",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^2.3.0",
+    "gatsby-plugin-prismic-previews": "^5.2.5",
+    "gatsby-plugin-react-helmet": "^5.3.0",
+    "gatsby-plugin-sass": "^5.11.1",
+    "gatsby-plugin-sharp": "^4.12.1",
+    "gatsby-source-prismic": "^5.2.5",
+    "gatsby-transformer-sharp": "^4.12.1",
+    "graphql": "^15.8.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "typescript": "^4.6.3",
+    "wait-on": "^6.0.1"
+  },
+  "scripts": {
+    "dev": "concurrently \"gatsby develop\"  \"wait-on http://localhost:8000/___graphql && yarn generate --watch \"",
+    "generate": "graphql-codegen --config codegen.yaml",
+    "prestart": "gatsby develop",
+    "start": "yarn clean && yarn dev",
+    "build": "gatsby build",
+    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "2.4.8",
+    "@graphql-codegen/typescript-operations": "2.3.5",
+    "@graphql-codegen/typescript-react-apollo": "3.2.11",
+    "eslint": "^8.3.0",
+    "prettier": "^2.5.0"
+  }
+}
