@@ -1,7 +1,7 @@
 import { SliceZone, SliceZoneComponents } from "@prismicio/react";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import { components } from "../slices/SliceIndex";
+
 import { PostQuery } from "../_generated/graphql-types";
 
 const PostTemplate = () => {
@@ -12,12 +12,13 @@ const PostTemplate = () => {
           blog_title {
             text
           }
-          body {
-            ... on PrismicSliceType {
-              slice_type
-            }
-            ...PostTextBox
-          }
+          # EXAMPLE OF HOW TO ADD SLICES TO QUERY - Fragment comes from the slice file itself
+          # body {
+          #   ... on PrismicSliceType {
+          #     slice_type
+          #   }
+          #   ...PostTextBox
+          # }
         }
       }
     }
@@ -28,10 +29,12 @@ const PostTemplate = () => {
   return (
     <>
       <h1>{data.prismicPost?.data.blog_title?.text}</h1>
+
+      {/* Example of how to add slices to a page
       <SliceZone
         slices={data.prismicPost?.data.body}
         components={components as SliceZoneComponents}
-      />
+      /> */}
     </>
   );
 };

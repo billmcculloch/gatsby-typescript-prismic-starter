@@ -13,9 +13,7 @@ module.exports = {
         repositoryName: process.env.PRISMIC_REPO_NAME,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
         linkResolver: require("./linkResolver").linkResolver,
-        schemas: {
-          my_deleted_schema: {},
-        },
+        schemas: {},
       },
     },
     `gatsby-plugin-sass`,
