@@ -1,4 +1,4 @@
-Basic starter project using Gatsby. Set up with Typescript, SCSS, GraphQL Codegen and Prismic CSS 
+Basic starter project using Gatsby. Set up with Typescript, SCSS, GraphQL Codegen and Prismic CMS 
 
 Start by running yarn to install all packages. Then set up the Prismic connection:
 
